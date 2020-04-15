@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "name": "LeetCode Plus",
+    "description": "LeetCode questions asked in Google, Facebook, Amazon, LinkedIn, Uber and Microsoft",
+    "version": "1.0",
+    "browser_action": {
+        "default_icon": "iconOff.png"
+      },
+    "content_scripts": [
+      {
+        "matches": [
+          "*://*.leetcode.com/problemset/*"
+        ],
+        "js": ["content.js"]
+      }
+    ],
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+    "background": {
+        "persistent": false,
+        "scripts": ["background.js"]
+    },
+    "icons": { "128": "iconOn.png" }
+  }
